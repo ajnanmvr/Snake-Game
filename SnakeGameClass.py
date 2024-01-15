@@ -63,7 +63,7 @@ class SnakeGameClass:
                                 offset=10)
             imgMain=cvzone.overlayPNG(imgMain,self.imgFood, (rx-self.wFood//2,ry-self.hFood//2))
             #check for collision
-            pts=np.array(self.points[:-2],np.int32)
+            pts=np.array(self.points[10:-2],np.int32)
             pts=pts.reshape((-1,1,2))
             cv2.polylines(imgMain,[pts],False,(0,200,0),2)
             distace=cv2.pointPolygonTest(pts,(cx,cy),True)
